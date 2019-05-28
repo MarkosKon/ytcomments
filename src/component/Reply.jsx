@@ -52,6 +52,7 @@ class Reply extends Component {
                             <a
                               href={reply.snippet.authorChannelUrl}
                               target="_blank"
+                              rel="noopener noreferrer"
                             >
                               {reply.snippet.authorDisplayName}
                             </a>
@@ -74,7 +75,7 @@ class Reply extends Component {
     if (this.state.replies.length <= 0) {
       const url = `https://www.googleapis.com/youtube/v3/comments?part=snippet&parentId=${
         this.props.comment.id
-      }&maxResults=100&key=YOUR_KEY`;
+      }&maxResults=100&key=${process.env.REACT_APP_YT_KEY}`;
       fetch(url)
         .then(response => response.json())
         .then(data => {

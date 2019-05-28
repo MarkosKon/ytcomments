@@ -6,7 +6,6 @@ class AlertDismissable extends Component {
   constructor(props) {
     super(props);
 
-    this.handleAlertShow = this.handleAlertShow.bind(this);
     this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
 
     this.state = {
@@ -15,15 +14,14 @@ class AlertDismissable extends Component {
   }
 
   render() {
-    if (this.state.alertVisible) {
-      return (
+    const { alertVisible } = this.state;
+    return (
+      alertVisible && (
         <Alert bsStyle="success" onDismiss={this.handleAlertDismiss}>
           <p>{this.props.message}</p>
         </Alert>
-      );
-    } else {
-      return null;
-    }
+      )
+    );
   }
 
   componentDidMount() {
@@ -46,10 +44,6 @@ class AlertDismissable extends Component {
 
   handleAlertDismiss() {
     this.setState({ alertVisible: false });
-  }
-
-  handleAlertShow() {
-    this.setState({ alertVisible: true });
   }
 }
 

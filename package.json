@@ -5,16 +5,35 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "bootstrap": "^3.3.7",
+    "memoize-one": "^5.0.4",
     "react": "^16.2.0",
     "react-bootstrap": "^0.32.0",
     "react-dom": "^16.2.0",
+    "react-ga": "^2.5.7",
+    "react-highlight-words": "^0.16.0",
     "react-lazyload": "^2.3.0",
-    "react-scripts": "1.1.0"
+    "react-scripts": "^3.0.1",
+    "react-virtualized-auto-sizer": "^1.0.2",
+    "react-window": "^1.6.0-alpha.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "netlify deploy --dir=build",
+    "deploy:prod": "netlify deploy --prod --dir=build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
