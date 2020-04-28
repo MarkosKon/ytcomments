@@ -14,7 +14,7 @@
     "react-lazyload": "^2.3.0",
     "react-scripts": "^3.0.1",
     "react-virtualized-auto-sizer": "^1.0.2",
-    "react-window": "^1.6.0-alpha.1"
+    "react-window": "1.6.0-alpha.1"
   },
   "scripts": {
     "start": "react-scripts start",
